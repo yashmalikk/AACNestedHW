@@ -5,6 +5,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.Test;
+
+import edu.grinnell.csc207.util.NullKeyException;
+
 import org.junit.jupiter.api.BeforeAll;
 
 import java.nio.file.Files;
@@ -422,9 +425,10 @@ public class TestAACMappings {
    *
    * @throws IOException
    *   If an IO operation fails.
+   * @throws NullKeyException 
    */
   @Test
-  public void testAdd() throws IOException {
+  public void testAdd() throws IOException, NullKeyException {
     AACMappings mappings = new AACMappings(configFile(""));
 
     mappings.addItem("p", "pizza toppings");

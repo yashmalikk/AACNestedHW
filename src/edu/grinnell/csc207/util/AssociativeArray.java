@@ -168,6 +168,20 @@ public class AssociativeArray<K, V> {
   } // expand()  // End of expand method
 
   /**
+   * Get the key at the given index.
+   *
+   * @param index The index of the key to retrieve.
+   * @return The key at the specified index.
+   * @throws IndexOutOfBoundsException if the index is out of bounds.
+   */
+  public K getKey(int index) throws IndexOutOfBoundsException {
+    if (index < 0 || index >= size) {
+      throw new IndexOutOfBoundsException("Index out of bounds: " + index);
+    }
+    return pairs[index].key;
+  }
+
+  /**
    *
    * @param key to find in array
    * @return the index of key
@@ -184,4 +198,12 @@ public class AssociativeArray<K, V> {
     } // iterate over pairs
     throw new KeyNotFoundException("Key not found: " + key);
   } // find(K)  // End of find method
+
+  public String[] keys() {
+    String[] keyArray = new String[size];  // Create an array for the keys
+    for (int i = 0; i < size; i++) {
+        keyArray[i] = pairs[i].key.toString();  // Ensure you're returning the keys as strings
+    }
+    return keyArray;
+  }
 } // class AssociativeArray  // End of AssociativeArray class

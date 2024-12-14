@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+      {
+          "label": "javac",
+          "type": "shell",
+          "command": "javac",
+          "args": [
+              "-cp", "lib/freetts.jar;lib/jsapi.jar;.",
+              "-d", "bin",
+              "src/AAC.java"
+          ],
+          "group": {
+              "kind": "build",
+              "isDefault": true
+          },
+          "problemMatcher": ["$javac"],
+          "detail": "Compile AAC.java with the required libraries"
+      }
+  ]
+}
