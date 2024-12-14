@@ -1,13 +1,20 @@
 {
   "version": "0.2.0",
   "configurations": [
-      {
-          "type": "java",
-          "name": "Launch AAC",
-          "request": "launch",
-          "mainClass": "AAC",
-          "vmArgs": "-cp lib/freetts.jar;lib/jsapi.jar;bin;",
-          "projectName": "AACNestedHW"
-      }
+    {
+      "type": "java",
+      "name": "AAC",
+      "request": "launch",
+      "mainClass": "AAC",
+      "projectName": "AACNestedHW_b0e76e0c"
+    },
+    {
+      "type": "java",
+      "name": "Launch AAC",
+      "request": "launch",
+      "mainClass": "AAC",
+      "vmArgs": "-cp lib/freetts.jar;lib/jsapi.jar;bin;",
+      "projectName": "AACNestedHW"
+    }
   ]
 }
