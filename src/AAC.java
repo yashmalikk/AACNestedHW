@@ -53,7 +53,7 @@ public class AAC implements ActionListener {
 	 */
 	public AAC(String filename) {
 		this.page = new AACCategory("test");
-		// this.page = new AACMappings(filename);
+		this.page = new AACMappings(filename);
 		this.images = this.page.getImageLocs();
 		this.startIndex = 0;
 		this.endIndex = Math.min(NUM_ACROSS * NUM_DOWN, this.images.length);
